@@ -1,1 +1,479 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Up Diamond Free Fire - Aman & Terpercaya</title>
+    <!-- Font Google (Poppins) untuk tampilan modern -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+    <style>
+        /* --- CSS DASIS & VARIABEL WARNA --- */
+        :root {
+            --primary: #ff9f43; /* Orange FF */
+            --secondary: #ee5253;
+            --dark: #222f3e;
+            --darker: #1e272e;
+            --light: #c8d6e5;
+            --glow: 0 0 15px rgba(255, 159, 67, 0.6);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--darker);
+            background-image: radial-gradient(circle at 50% 0%, #3e2723 0%, var(--darker) 70%);
+            color: var(--light);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px; /* Lebar maksimal seperti HP */
+            background: rgba(34, 47, 62, 0.9);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* --- HEADER --- */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: var(--glow);
+        }
+
+        header p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* --- FORM INPUT --- */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 10px;
+            border: 2px solid var(--dark);
+            background: var(--darker);
+            color: white;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: var(--glow);
+        }
+
+        /* --- GRID PAKET TOP UP --- */
+        .grid-paket {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 10px;
+            margin-bottom: 25px;
+            max-height: 400px;
+            overflow-y: auto; /* Scroll jika terlalu banyak */
+            padding-right: 5px;
+        }
+
+        /* Custom Scrollbar */
+        .grid-paket::-webkit-scrollbar {
+            width: 5px;
+        }
+        .grid-paket::-webkit-scrollbar-thumb {
+            background: var(--dark);
+            border-radius: 5px;
+        }
+
+        .paket-card {
+            background: var(--dark);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            padding: 15px 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .paket-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .paket-card.selected {
+            border-color: var(--primary);
+            background: rgba(255, 159, 67, 0.1);
+            box-shadow: var(--glow);
+        }
+
+        .paket-card h3 {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .paket-card .harga {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        /* --- PEMBAYARAN --- */
+        .payment-methods {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .payment-option {
+            flex: 1;
+            background: var(--dark);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .payment-option:hover {
+            background: #2f3640;
+        }
+
+        .payment-option.selected {
+            border-color: var(--primary);
+            background: rgba(255, 159, 67, 0.1);
+        }
+
+        .payment-option img {
+            height: 40px; /* Ukuran logo/image */
+            margin-bottom: 5px;
+            object-fit: contain;
+        }
+
+        /* --- KONFIRMASI & TOMBOL --- */
+        .summary-box {
+            background: rgba(0,0,0,0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .summary-box span {
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .btn-checkout {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(238, 82, 83, 0.4);
+        }
+
+        .btn-checkout:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(238, 82, 83, 0.6);
+        }
+
+        .btn-checkout:disabled {
+            background: #576574;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-gem"></i> Top Up Diamond FF</h1>
+            <p>Aman, Cepat, & Terpercaya</p>
+            <p>Hanya Ada Pada Rangga MarketPlace</p>
+        </header>
+
+        <!-- STEP 1: ID & NICKNAME -->
+        <div class="form-group">
+            <label for="userId">Masukkan ID Free Fire</label>
+            <input type="text" id="userId" placeholder="Contoh: 123456789" maxlength="10">
+        </div>
+
+        <div class="form-group">
+            <label for="nickname">Nickname FF (Wajib)</label>
+            <input type="text" id="nickname" placeholder="Isi sesuai karakter di game">
+        </div>
+
+        <!-- STEP 2: PILIH PAKET -->
+        <label>Pilih Diamond / Item:</label>
+        <div class="grid-paket" id="paketContainer">
+            <!-- Paket Diamond -->
+            <div class="paket-card" onclick="selectPaket(this, '5 DM', 'Rp 2.000')">
+                <h3>5 DM</h3>
+                <div class="harga">Rp 2.000</div>
+            </div>
+            <div class="paket-card" onclick="selectPaket(this, '12 DM', 'Rp 2.500')">
+                <h3>12 DM</h3>
+                <div class="harga">Rp 2.500</div>
+            </div>
+            <div class="paket-card" onclick="selectPaket(this, '50 DM', 'Rp 7.000')">
+                <h3>50 DM</h3>
+                <div class="harga">Rp 7.000</div>
+            </div>
+            <div class="paket-card" onclick="selectPaket(this, '70 DM', 'Rp 10.000')">
+                <h3>70 DM</h3>
+                <div class="harga">Rp 10.000</div>
+            </div>
+            <div class="paket-card" onclick="selectPket(this, '100 DM', 'Rp 14.000')">
+                <h3>100 DM</h3>
+                <div class="harga">Rp 14.000</div>
+            </div>
+            <div class="paket-card" onclick="selectPaket(this, '140 DM', 'Rp 20.000')">
+                <h3>140 DM</h3>
+                <div class="harga">Rp 20.000</div>
+            </div>
+            <div class="paket-card" onclick="selectPaket(this, '200 DM', 'Rp 28.000')">
+                <h3>200 DM</h3>
+                <div class="harga">Rp 28.000</div>
+            </div>
+            <div class="paket-card" onclick="selectPaket(this, '280 DM', 'Rp 38.000')">
+                <h3>280 DM</h3>
+                <div class="harga">Rp 38.000</div>
+            </div>
+            <div class="paket-card" onclick="selectPaket(this, '355 DM', 'Rp 48.000')">
+                <h3>355 DM</h3>
+                <div class="harga">Rp 48.000</div>
+            </div>
+            <div class="paket-card" onclick="selectPaket(this, '500 DM', 'Rp 68.000')">
+                <h3>500 DM</h3>
+                <div class="harga">Rp 68.000</div>
+            </div>
+            <div class="paket-card" onclick="selectPaket(this, '720 DM', 'Rp 98.000')">
+                <h3>720 DM</h3>
+                <div class="harga">Rp 98.000</div>
+            </div>
+            <div class="paket-card" onclick="selectPaket(this, '1000 DM', 'Rp 135.000')">
+                <h3>1000 DM</h3>
+                <div class="harga">Rp 135.000</div>
+            </div>
+            <div class="paket-card" onclick="selectPaket(this, '1440 DM', 'Rp 195.000')">
+                <h3>1440 DM</h3>
+                <div class="harga">Rp 195.000</div>
+            </div>
+            <div class="paket-card" onclick="selectPaket(this, '2000 DM', 'Rp 268.000')">
+                <h3>2000 DM</h3>
+                <div class="harga">Rp 268.000</div>
+            </div>
+            <div class="paket-card" onclick="selectPaket(this, '2880 DM', 'Rp 388.000')">
+                <h3>2880 DM</h3>
+                <div class="harga">Rp 388.000</div>
+            </div>
+            <div class="paket-card" onclick="selectPaket(this, '4000 DM', 'Rp 538.000')">
+                <h3>4000 DM</h3>
+                <div class="harga">Rp 538.000</div>
+            </div>
+            <div class="paket-card" onclick="selectPaket(this, '5000 DM', 'Rp 668.000')">
+                <h3>5000 DM</h3>
+                <div class="harga">Rp 668.000</div>
+            </div>
+        </div>
+
+        <!-- STEP 3: METODE PEMBAYARAN -->
+        <label>Pilih Metode Pembayaran:</label>
+        <div class="payment-methods">
+            <div class="payment-option" onclick="selectPayment(this, 'QRIS')">
+                <i class="fas fa-qrcode fa-2x" style="color: #00b894;"></i>
+                <span>QRIS</span>
+            </div>
+            <div class="payment-option" onclick="selectPayment(this, 'DANA')">
+                <i class="fas fa-wallet fa-2x" style="color: #0984e3;"></i>
+                <span>DANA</span>
+            </div>
+            <div class="payment-option" onclick="selectPayment(this, 'OVO')">
+                <i class="fas fa-mobile-alt fa-2x" style="color: #6c5ce7;"></i>
+                <span>OVO</span>
+            </div>
+            <div class="payment-option" onclick="selectPayment(this, 'GOPAY')">
+                <i class="fas fa-motorcycle fa-2x" style="color: #00c4a7;"></i>
+                <span>GoPay</span>
+            </div>
+        </div>
+
+        <!-- RINGKASAN PESANAN -->
+        <div class="summary-box">
+            <p><strong>ID:</strong> <span id="summaryId">-</span></p>
+            <p><strong>Nickname:</strong> <span id="summaryNick">-</span></p>
+            <p><strong>Paket:</strong> <span id="summaryPaket">Belum dipilih</span></p>
+            <p><strong>Pembayaran:</strong> <span id="summaryPayment">-</span></p>
+            <hr style="border-color: rgba(255,255,255,0.1); margin: 10px 0;">
+            <p style="font-size: 1.1rem;">Total: <span id="summaryTotal">Rp 0</span></p>
+        </div>
+
+        <button class="btn-checkout" id="btnCheckout" onclick="processCheckout()" disabled>
+            <i class="fab fa-whatsapp"></i> Hubungi Admin via WhatsApp
+        </button>
+
+        <footer>
+            <p>&copy; 2025 Rangga MarketPlace - Proses Instant & Aman</p>
+            <p><i class="fas fa-shield-alt"></i> Garansi 100%</p>
+        </footer>
+    </div>
+
+    <script>
+        // --- KONFIGURASI ---
+        // Ganti nomor WhatsApp admin dengan format internasional (tanpa +)
+        const ADMIN_WA_NUMBER = '6281338336011'; 
+        
+        // --- VARIABLE STATE ---
+        let selectedPaket = null;
+        let selectedPayment = null;
+        let selectedPaketName = '';
+        let selectedPaketPrice = '';
+
+        // --- FUNGSI PILIH PAKET ---
+        function selectPaket(element, name, price) {
+            // Hapus selected dari semua paket
+            document.querySelectorAll('.paket-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            // Tambah selected ke paket yang diklik
+            element.classList.add('selected');
+            
+            // Simpan data
+            selectedPaket = element;
+            selectedPaketName = name;
+            selectedPaketPrice = price;
+            
+            updateSummary();
+        }
+
+        // --- FUNGSI PILIH PEMBAYARAN ---
+        function selectPayment(element, method) {
+            // Hapus selected dari semua payment
+            document.querySelectorAll('.payment-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            
+            // Tambah selected ke payment yang diklik
+            element.classList.add('selected');
+            
+            // Simpan data
+            selectedPayment = method;
+            
+            updateSummary();
+        }
+
+        // --- UPDATE RINGKASAN ---
+        function updateSummary() {
+            const userId = document.getElementById('userId').value || '-';
+            const nickname = document.getElementById('nickname').value || '-';
+            
+            document.getElementById('summaryId').textContent = userId;
+            document.getElementById('summaryNick').textContent = nickname;
+            document.getElementById('summaryPaket').textContent = selectedPaketName || 'Belum dipilih';
+            document.getElementById('summaryPayment').textContent = selectedPayment || '-';
+            document.getElementById('summaryTotal').textContent = selectedPaketPrice || 'Rp 0';
+            
+            // Aktifkan tombol jika semua terisi
+            const checkoutBtn = document.getElementById('btnCheckout');
+            if (userId !== '-' && nickname !== '-' && selectedPaket && selectedPayment) {
+                checkoutBtn.disabled = false;
+            } else {
+                checkoutBtn.disabled = true;
+            }
+        }
+
+        // --- EVENT LISTENERS ---
+        document.getElementById('userId').addEventListener('input', updateSummary);
+        document.getElementById('nickname').addEventListener('input', updateSummary);
+
+        // --- PROSES CHECKOUT KE WHATSAPP ---
+        function processCheckout() {
+            if (!selectedPaket || !selectedPayment) {
+                alert('Mohon lengkapi semua data!');
+                return;
+            }
+
+            const userId = document.getElementById('userId').value;
+            const nickname = document.getElementById('nickname').value;
+
+            // Format pesan WhatsApp
+            const pesan = `
+Halo admin, saya ingin membeli diamond Free Fire dengan detail berikut:
+
+📱 ID FF: ${userId}
+👤 Nickname: ${nickname}
+💎 Paket: ${selectedPaketName}
+💰 Metode Pembayaran: ${selectedPayment}
+💵 Total Harga: ${selectedPaketPrice}
+
+Mohon konfirmasi ya, terima kasih!
+            `;
+
+            // Encode pesan untuk URL
+            const encodedPesan = encodeURIComponent(pesan.trim());
+            
+            // Buat URL WhatsApp
+            const waUrl = `https://wa.me/${ADMIN_WA_NUMBER}?text=${encodedPesan}`;
+            
+            // Redirect ke WhatsApp
+            window.open(waUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
